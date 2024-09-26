@@ -1,9 +1,17 @@
 import {app, BrowserWindow} from 'electron';
 import {join, resolve} from 'node:path';
+import { galleryMenuService } from './events/galleryMenuService';
 
 async function createWindow() {
   const browserWindow = new BrowserWindow({
     show: false, // Use the 'ready-to-show' event to show the instantiated BrowserWindow.
+    frame: false,
+    titleBarStyle: 'hidden',
+    titleBarOverlay: {
+      color: '#000',
+      symbolColor: '#e2e8f0',
+      height: 48,
+    },
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -24,10 +32,13 @@ async function createWindow() {
   browserWindow.on('ready-to-show', () => {
     browserWindow?.show();
 
-    if (import.meta.env.DEV) {
+    // if (import.meta.env.DEV) {
       browserWindow?.webContents.openDevTools();
-    }
+    // }
   });
+
+  // service provider
+  galleryMenuService(browserWindow);
 
   /**
    * Load the main page of the main window.
@@ -52,6 +63,7 @@ async function createWindow() {
 
   return browserWindow;
 }
+
 
 /**
  * Restore an existing BrowserWindow or Create a new BrowserWindow.

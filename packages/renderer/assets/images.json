@@ -1,0 +1,34 @@
+[
+	{
+		"label": "sari_sandu",
+		"path": "/assets/img/Sari Sandu.jpeg"
+	},
+	{
+		"label": "nusa_fua_funi",
+		"path": "/assets/img/Nusa Fua Funi.jpeg"
+	},
+	{
+		"label": "ina_boi",
+		"path": "/assets/img/Ina Bo_i.jpeg"
+	},
+	{
+		"label": "deta_hitu",
+		"path": "/assets/img/Deta Hitu.jpeg"
+	},
+	{
+		"label": "ama_boi",
+		"path": "/assets/img/Ama Bo_i.jpeg"
+	},
+	{
+		"label": "tirosa",
+		"path": "/assets/img/Tirosa.jpeg"
+	},
+	{
+		"label": "manek",
+		"path": "/assets/img/Manek.jpeg"
+	},
+	{
+		"label": "tua_batu",
+		"path": "/assets/img/Tua Batu.jpeg"
+	}
+]
